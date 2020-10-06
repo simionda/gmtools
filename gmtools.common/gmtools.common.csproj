@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Dave Simione</Authors>
+    <Company></Company>
+    <Product>gmtools</Product>
+    <Copyright>2020</Copyright>
+    <Description>A collection of tools for running tabletop role playing games.  This library is a base used by all other libraries; most likely you won't include it by itself.
+
+Not associated with any tabletop system.  Only licensed for use if allowed by whichever system you are playing.</Description>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="XCOPY &quot;$(ProjectDir)\bin\$(ConfigurationName)\*.nupkg&quot; &quot;$(SolutionDir)packages&quot; /y" />
+  </Target>
+
+</Project>
