@@ -1,4 +1,4 @@
-﻿using gmtools.time;
+﻿using gmtools.time.Calendars;
 using System;
 
 namespace gmtools.timecounter
@@ -13,7 +13,7 @@ namespace gmtools.timecounter
 
             Console.WriteLine("");
 
-            var currentTime = new FaerunCalendar();
+            var currentTime = new Harptos();
             for (var ctr = 0; ctr <= 86400; ctr++)
             {
                 Console.WriteLine($"Counter: {ctr}, Current Time: {currentTime.ToString()}");
