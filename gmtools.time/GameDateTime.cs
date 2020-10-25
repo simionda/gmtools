@@ -2,7 +2,7 @@
 
 namespace gmtools.time
 {
-    public class BaseTime
+    public class GameDateTime
     {
         internal decimal ticks;
 
