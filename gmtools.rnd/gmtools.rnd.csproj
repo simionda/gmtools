@@ -11,10 +11,6 @@ Not associated with any tabletop system.  Only licensed for use if allowed by wh
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="XCOPY &quot;$(ProjectDir)\bin\$(ConfigurationName)\*.nupkg&quot; &quot;$(SolutionDir)packages&quot; /y" />
-  </Target>
-
   <ItemGroup>
     <ProjectReference Include="..\gmtools.common\gmtools.common.csproj" />
   </ItemGroup>
