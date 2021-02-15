@@ -1,0 +1,113 @@
+<a [routerLink]="['/npcs']">Back to list</a>
+
+<div class="row">
+  <div class="col-10">
+    <div class="row">
+      <div class="col-12">
+        <h1>{{npc.name}}</h1>
+        <h5>{{npc.alignment}} {{npc.race}} {{npc.class}}</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <div class="card-group">
+          <div class="card text-center">
+            <div class="card-header">STR</div>
+            <div class="card-body">
+              <h2 class="card-title">10</h2>
+            </div>
+            <div class="card-footer">0</div>
+          </div>
+          <div class="card text-center">
+            <div class="card-header">DEX</div>
+            <div class="card-body">
+              <h2 class="card-title">19</h2>
+            </div>
+            <div class="card-footer">4</div>
+          </div>
+          <div class="card text-center">
+            <div class="card-header">CON</div>
+            <div class="card-body">
+              <h2 class="card-title">14</h2>
+            </div>
+            <div class="card-footer">+2</div>
+          </div>
+          <div class="card text-center">
+            <div class="card-header">INT</div>
+            <div class="card-body">
+              <h2 class="card-title">12</h2>
+            </div>
+            <div class="card-footer">+1</div>
+          </div>
+          <div class="card text-center">
+            <div class="card-header">WIS</div>
+            <div class="card-body">
+              <h2 class="card-title">14</h2>
+            </div>
+            <div class="card-footer">+2</div>
+          </div>
+          <div class="card text-center">
+            <div class="card-header">CHA</div>
+            <div class="card-body">
+              <h2 class="card-title">11</h2>
+            </div>
+            <div class="card-footer">0</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <dl class="row">
+          <dt class="col-3">Appearance</dt>
+          <dd class="col-9">Unusual eye color, unusual skin color, exceptionally handsome</dd>
+          <dt class="col-3">Talents</dt>
+          <dd class="col-9">Speaks several languages fluently, great with animals</dd>
+          <dt class="col-3">Mannerisms</dt>
+          <dd class="col-9">Stares into the distance, doesn't speak much</dd>
+          <dt class="col-3">Interaction Traits</dt>
+          <dd class="col-9">Quiet</dd>
+          <dt class="col-3">Ideals</dt>
+          <dd class="col-9">Greater good, Fairness</dd>
+          <dt class="col-3">Bonds</dt>
+          <dd class="col-9">Protective of colleagues or compatriots</dd>
+          <dt class="col-3">Flaws</dt>
+          <dd class="col-9">Prone to rage</dd>
+        </dl>
+      </div>
+      <div class="col-4">
+        <dl class="row">
+          <dt class="col-3">Hometown</dt>
+          <dd class="col-9">Waterdeep</dd>
+          <dt class="col-3">Current Location</dt>
+          <dd class="col-9">Unknown</dd>
+          <dt class="col-3">Wealth</dt>
+          <dd class="col-9">Wealthy</dd>
+          <dt class="col-3">Notoriety</dt>
+          <dd class="col-9">Legendary</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div class="col-2">
+    <img src="{{npc.imageUrl}}" alt="Picture of {{npc.name}}" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-4">
+    <h5>Timeline</h5>
+    <p>Age: 243, Health: Dead</p>
+  </div>
+  <div class="col-4">
+    <h5>Social Links</h5>
+    <dl class="row">
+      <dt class="col-3">Family</dt>
+      <dd class="col-9">Unknown</dd>
+      <dt class="col-3">Allies</dt>
+      <dd class="col-9">Catti-brie</dd>
+      <dt class="col-3">Enemies</dt>
+      <dd class="col-9">Artimis</dd>
+    </dl>
+  </div>
+  <div class="col-4">
+    <h5>Notes</h5>
+  </div>
+</div>
