@@ -1,5 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Version>0.1.0</Version>
@@ -9,14 +8,14 @@
 Not associated with any tabletop system.  Only licensed for use if allowed by whichever system you are playing.</Description>
     <Copyright>2020</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>D:\Repos\gmtools\Backup1\</UpgradeBackupLocation>
+    <OldToolsVersion>Current</OldToolsVersion>
   </PropertyGroup>
-
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="XCOPY &quot;$(ProjectDir)\bin\$(ConfigurationName)\*.nupkg&quot; &quot;$(SolutionDir)packages&quot; /y" />
   </Target>
-
   <ItemGroup>
     <ProjectReference Include="..\gmtools.common\gmtools.common.csproj" />
   </ItemGroup>
-
 </Project>
