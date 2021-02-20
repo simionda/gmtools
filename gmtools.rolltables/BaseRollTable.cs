@@ -97,14 +97,21 @@ namespace gmtools.rolltables
             //Remove all whitespace
             var temp = Regex.Replace(indexRange, @"\s+", "");
 
-            //Ensure {int}-{int} format
+            var lower = "";
+            var upper = "";
+
+            //If no '-' character, we're dealing with a single index
             if (temp.IndexOf('-') == -1)
             {
-                throw new ArgumentOutOfRangeException($"Index range not in valid format of 'lowerValue'-'upperValue'");
+                lower = temp;
+                upper = temp;
+
+            } else
+            {
+                lower = temp.Split('-')[0];
+                upper = temp.Split('-')[1];
             }
 
-            var lower = temp.Split('-')[0];
-            var upper = temp.Split('-')[1];
 
             if (!int.TryParse(lower, out int lowerIndex))
             {
@@ -123,14 +130,14 @@ namespace gmtools.rolltables
             }
         }
 
-        internal RollTableAction BuildStringAction(string name)
+        public RollTableAction BuildStringAction(string name)
         {
             return new RollTableAction(name, (r) => { r.Temp += name; return r; });
         }
 
-        internal RollTableAction BuildRollTableAction(string description, string tableName)
+        public RollTableAction BuildRollTableAction(string description, string tableName)
         {
-            return new RollTableAction(description, (r) => { var t = TableFactory.GetTableByName(tableName); return t.Roll(r); });
+            return new RollTableAction(description, (r) => { var t = TableFactory.Load(tableName); return t.Roll(r); });
         }
     }
 }

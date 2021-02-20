@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-12">
+    Search <input type="text" />
+    <a class="btn" (click)="createPlace()">Create Place</a>
+  </div>
+</div>
+<div class="card-deck">
+  <div class="card" *ngFor="let place of PlacesList">
+    <div class="card-body">
+      <h5 class="card-title"><a [routerLink]="['/places', place.name]">{{place.name}}</a></h5>
+    </div>
+  </div>
+</div>

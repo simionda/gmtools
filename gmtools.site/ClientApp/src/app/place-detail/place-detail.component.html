@@ -1,0 +1,44 @@
+<a [routerLink]="['/places']">Back to list</a>
+
+<div class="row">
+  <div class="col-10">
+    <div class="row">
+      <div class="col-12">
+        <h1>{{place.name}}</h1>
+        <h5>A {{place.size}} in Faerun</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <dl class="row">
+          <dt class="col-3">Ruler</dt>
+          <dd class="col-9"><a [routerLink]="['/npcs', place.ruler]">{{place.ruler}}</a></dd>
+          <dt class="col-3">Ruler's Status</dt>
+          <dd class="col-9">{{place.rulersStatus}}</dd>
+          <dt class="col-3">Race Relations</dt>
+          <dd class="col-9">{{place.raceRelations}}</dd>
+        </dl>
+      </div>
+      <div class="col-4">
+        <dl class="row">
+          <dt class="col-3">Known For</dt>
+          <dd class="col-9">{{place.knownFor}}</dd>
+          <dt class="col-3">Notable Traits</dt>
+          <dd class="col-9">{{place.notableTraits}}</dd>
+        </dl>
+      </div>
+      <div class="col-4">
+        <dl class="row">
+          <dt class="col-3">Current Calamity</dt>
+          <dd class="col-9">{{place.calamity}}</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <h5>Buildings</h5>
+    <p *ngFor="let b of place.buildings">{{b.description}}</p>
+  </div>
+</div>

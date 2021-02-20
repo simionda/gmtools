@@ -16,6 +16,10 @@ import { HeaderComponent } from './header/header.component';
 import { NpcListComponent } from './npc-list/npc-list.component';
 import { NpcComponent } from './npc/npc.component';
 import { StatBlockComponent } from './stat-block/stat-block.component';
+import { PlacesListComponent } from './places-list/places-list.component';
+import { PlaceDetailComponent } from './place-detail/place-detail.component';
+import { ShopDetailComponent } from './shop-detail/shop-detail.component';
+import { TavernDetailComponent } from './tavern-detail/tavern-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { StatBlockComponent } from './stat-block/stat-block.component';
     HeaderComponent,
     NpcListComponent,
     NpcComponent,
-    StatBlockComponent
+    StatBlockComponent,
+    PlacesListComponent,
+    PlaceDetailComponent,
+    ShopDetailComponent,
+    TavernDetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -39,7 +47,9 @@ import { StatBlockComponent } from './stat-block/stat-block.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
       { path: 'npcs', component: NpcListComponent },
-      { path: 'npcs/:npcName', component: NpcComponent }
+      { path: 'npcs/:npcName', component: NpcComponent },
+      { path: 'places', component: PlacesListComponent },
+      { path: 'places/:placeName', component: PlaceDetailComponent }
     ])
   ],
   providers: [

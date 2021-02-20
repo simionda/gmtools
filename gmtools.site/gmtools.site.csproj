@@ -34,12 +34,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="ClientApp\src\app\npc-list\npc.ts" />
+    <None Remove="ClientApp\src\app\places-list\place.ts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\images\DRIZZT.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\gmtools.rolltables\gmtools.rolltables.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\npc-list\npc.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\places-list\place.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

@@ -18,7 +18,7 @@ namespace gmtools.tablecli
                     break;
                 }
 
-                var table = TableFactory.GetTableByName(tableName);
+                var table = TableFactory.Load(tableName);
                 var result = table.Roll();
 
                 Console.WriteLine("Result:");
