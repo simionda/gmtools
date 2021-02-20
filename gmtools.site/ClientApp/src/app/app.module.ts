@@ -15,6 +15,7 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
 import { HeaderComponent } from './header/header.component';
 import { NpcListComponent } from './npc-list/npc-list.component';
 import { NpcComponent } from './npc/npc.component';
+import { StatBlockComponent } from './stat-block/stat-block.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NpcComponent } from './npc/npc.component';
     FetchDataComponent,
     HeaderComponent,
     NpcListComponent,
-    NpcComponent
+    NpcComponent,
+    StatBlockComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
