@@ -1,0 +1,13 @@
+<ul class="nav flex-column">
+  <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+    <a class="nav-link text-dark" [routerLink]="['/npcs']">NPCs</a>
+  </li>
+  <li class="nav-item" [routerLinkActive]="['link-active']">
+    <a class="nav-link text-dark" [routerLink]="['/places']">Places</a>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link text-dark">Shops</a>
+      </li>
+    </ul>
+  </li>
+</ul>

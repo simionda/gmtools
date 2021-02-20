@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-12">
+    Search: <input type="text" />
+    <a class="btn" (click)="createNpc()">Create NPC</a>
+  </div>
+</div>
+<div class="card-deck">
+  <div class="card" *ngFor="let npc of NpcList">
+    <img src="{{npc.imageUrl}}" class="card-img-top" alt="No image" style="max-height: 50%; max-width: 100%" />
+    <div class="card-body">
+      <h5 class="card-title"><a [routerLink]="['/npcs', npc.name]">{{npc.name}}</a></h5>
+      <p class="card-text">{{npc.alignment}} {{npc.race}} {{npc.class}}</p>
+    </div>
+  </div>
+</div>
